@@ -1,0 +1,17 @@
+<h2>Últimas publicaciones sobre Tecnología</h2>
+<ul class="post-list">
+    @for (post of postService.posts; track post.id) {
+    <li class="post-item" [ngClass]="{selected: post.id === selectedPost}">
+        <div>
+            <a [routerLink]="post.id.toString()" class="post-link">
+                <h3 class="post-title"> {{ post.title }} </h3>
+            </a>
+            <h5> {{ post.author }} </h5>
+            <h6>{{ post.publishDate }}</h6>
+            <a [routerLink]="post.id.toString()" class="post-link">Leer más</a>
+            <button class="trash-icon" (click)="deletePost(post.id)">🗑</button>
+        </div>
+
+    </li>
+    }
+</ul>

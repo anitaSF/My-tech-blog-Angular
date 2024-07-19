@@ -1,0 +1,32 @@
+.header {
+    background-color: #0f0f2e;
+    color: white;
+    text-align: center;
+    padding: 10 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .logo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+
+        .link {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .link:hover {
+            color: #ff00ff;
+        }
+    }
+}

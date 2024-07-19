@@ -1,0 +1,5 @@
+.post-list {
+    .post-item.selected {
+        background-color: orange;
+    }
+}
