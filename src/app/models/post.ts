@@ -4,5 +4,5 @@ export default interface Post {
     text: string;
     author: string;
     publishDate: string;
-
+    image: string;
 }
