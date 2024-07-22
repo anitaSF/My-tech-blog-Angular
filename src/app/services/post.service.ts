@@ -7,7 +7,7 @@ import Post from '../models/post';
 })
 export class PostService {
 
-  API_URL = 'https://my-json-server.typicode.com/mariogiron/blog-server/posts';
+  API_URL = 'https://668acfdc2c68eaf3211de9ad.mockapi.io/app/posts';
   posts: Post[];
 
   constructor(private http: HttpClient) {
@@ -33,4 +33,5 @@ export class PostService {
   deletePost(id: number) {
     return this.http.delete<Post>(`${this.API_URL}/${id}`)
   }
+
 }

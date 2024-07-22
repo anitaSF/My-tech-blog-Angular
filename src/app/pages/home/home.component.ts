@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { PostListComponent } from '../../components/post-list/post-list.component';

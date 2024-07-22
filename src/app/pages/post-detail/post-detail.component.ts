@@ -1,41 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { PostService } from './../../services/post.service';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { HeaderComponent } from '../../components/header/header.component';
-import Post from '../../models/post';
+import { CardComponent } from "../../components/card/card.component";
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [HeaderComponent, RouterLink],
+  imports: [HeaderComponent, RouterLink, CardComponent],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.css'
 })
-export class PostDetailComponent implements OnInit {
-
-  selectedPost: Post | undefined;
-
-  constructor(
-    private route: ActivatedRoute,
-    public postService: PostService
-  ) {
-  }
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.params['id'];
-
-    this.getPostData(id);
-  }
-
-  getPostData(id: number) {
-    this.postService.getPost(id).subscribe({
-      next: (data) => {
-        this.selectedPost = data;
-      },
-      error: (e) => {
-        console.log(e);
-      },
-    });
-  }
+export class PostDetailComponent {
 
 }
